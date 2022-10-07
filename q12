@@ -1,0 +1,21 @@
+Questao 12:
+
+-> Assim como os ponteiros podem apontar para variaveis e passar a ter o mesmo valor que ela, um ponteiro para função aponta para uma função e passa a ter a mesma funcionalidade que ela.
+
+-> Programa exemplo:
+#include <stdio.h>
+#include <stdlib.h>
+
+int soma(int x, int y){
+    	    return x+y;
+    	    }
+	int main(){
+    	   int (*ponteiroFuncao)(int, int);
+    	   int x;
+
+    	   ponteiroFuncao=soma;
+
+    	   x = ponteiroFuncao(2, 3);
+    	   printf("A soma eh igual a: %d \n", x);
+    	   return 0;
+	}
